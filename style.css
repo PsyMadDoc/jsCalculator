@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  font-family: 'Varela Round', sans-serif;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to bottom, #329d9c, #205072);
+}
+
+.wrapper {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.calc-wrapper {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.container-calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.container-calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.container-calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-input {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-input {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.container-result-grid {
+  grid-area: 1 / 2 / 2 / 3;
+  min-width: 20vh;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  display: grid;
+  align-content: flex-start;
+  justify-content: flex-end;
+  min-height: 100vh;
+}
+
+.container-result-grid > h3 {
+  color: white;
+}
